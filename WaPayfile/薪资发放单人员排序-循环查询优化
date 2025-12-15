@@ -6,5 +6,5 @@
 
 
 时间	项目/任务	遇到的难点	解决方案	核心学习点	相关文档/代码位置
-2024-12-15	[20251106-000085]薪资发放单发薪人员排序功能开发	调用标品接口时显示401	组长指出是用错了方法，用InvocationInfoProxy.getYhtAccessToken()	发起请求方式	  dejv分支，WaPayfileServiceImpl.java第177行
+2025-12-15	[20251106-000085]薪资发放单发薪人员排序功能开发	调用标品接口时显示401	组长指出是用错了方法，用InvocationInfoProxy.getYhtAccessToken()	发起请求方式	  dejv分支，WaPayfileServiceImpl.java第177行
 
