@@ -20,6 +20,7 @@
           不管源数据应该是什么。考虑拿到什么数据、要实现什么效果
   3.3 如果重做这个任务，哪些部分可以做得更好
       （1）对获取到的数据（调试-billnum-复制值）在在线格式化网站（https://jsonlint.com/）里转为JSON格式
+      （2）使用import com.alibaba.fastjson.JSONObject;的String str = JSONObject.toJSONString(params)在在线网站 http://www.bejson.com解析为json格式
 
 三：薪资发放单中的员工需要按照组织+部门+职务组合排序
   3.1 亮点
