@@ -1,0 +1,22 @@
+一：命名
+    应用编码_单据号billNo_VM.Extend.js
+二：脚本是否成功执行验证（×）  【不需要】    
+三：公共方法
+    cb.define(process.env.__DOMAINKEY__, [], function () {
+  const cpurart_kkfnProductPurchaseRequisition_VM = {
+      doAction: function (name, viewModel) {
+          if (this[name])
+              this[name](viewModel);
+      },
+      init: function (viewModel) {
+        
+      }
+  }
+  try {
+      module.exports = cpurart_kkfnProductPurchaseRequisition_VM;
+  } catch (error) {
+    console.log(error);
+  }
+  return cpurart_kkfnProductPurchaseRequisition_VM;
+});
+四：调试
