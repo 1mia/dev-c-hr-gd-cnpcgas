@@ -1,0 +1,51 @@
+一：查询
+  1.1 查询时需要使用复合函数时，sql
+      （1）yms调用
+             @Resource(name = "baseDAO", type = BaseDAO.class)
+            private IYmsJdbcApi ymsJdbcApi;
+
+            @Autowired
+            private IBillQueryRepository billQueryRepository;
+
+      （2）通用sql
+            SQLParameter sqlParameter = new SQLParameter();
+            sqlParameter.addParam(originalKey);
+             String sql = "SELECT version FROM  grade_allowance WHERE original_version_key=? ORDER BY version desc";
+
+            List<Map<String, Object>> maxVersionInfoList = ymsJdbcApi.queryForList(sql, sqlParameter,
+                new MapListProcessor());
+  1.2 字段查询后需要重命名
+      （1）通用类
+             QuerySchema querySchema = new QuerySchema();
+             querySchema.addSelect(
+                    "org, org.name as org_name, name, name.name as name_name,code,money,version,enablets,original_version_key");
+            querySchema.addCondition(QueryConditionGroup.and(
+                    QueryCondition.name("original_version_key").eq(originalVersionKey),
+                    QueryCondition.name("dr").eq("0")));
+
+            historyVersion = billQueryRepository
+                    .queryMapBySchema(W96522GradeAllowance.ENTITY_NAME, querySchema, CHRGD_CNPCGAS);
+
+二：空指针检查
+  2.1 使用sql时
+      if (maxVersionInfoList != null && !maxVersionInfoList.isEmpty()
+                && maxVersionInfoList.get(0).get("version") != null) {
+    
+            return maxVersionInfoList.get(0).get("version").toString();
+            
+        }
+  2.2 使用query时
+      List<Map<String, Object>> historyVersion = new ArrayList();
+        try {
+        }catch (Exception e) {
+            logger.info("查询历史版本失败");
+            new BusinessException(e);
+
+        }
+        
+      
+    
+        
+          
+    
+    
