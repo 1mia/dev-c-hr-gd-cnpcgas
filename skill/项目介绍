@@ -1,0 +1,8 @@
+一：项目用的技术
+  1.1 package.json 
+    （1）dependencies：@mdf/create-app
+    （2）这是一个 云星空（Yonyou K3 Cloud）MDF 项目
+            前后端代码在同一个仓库，用 Babel 编译服务端代码，用 Webpack 打包前端扩展代码。
+            debug 命令同时启动前端调试服务器（webpack serve）和后端 Node 服务（nodemon）
+    （3）Node.js 作为后端运行环境（从 main 字段和 nodemon 脚本可知）。
+        支持 HTTPS 开发调试（MDF_HTTPS=true）
