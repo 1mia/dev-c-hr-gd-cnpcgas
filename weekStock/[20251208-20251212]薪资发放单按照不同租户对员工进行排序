@@ -21,7 +21,7 @@
                 insert   改为REPLACE INTO 
                 update 的where 条件必须加上set的key
     （2） REPLACE INTO `diwork_wa_mdd`.`bill_customerdef`
-(`id`, `cbillno`, `extscripturl`, `tenant_id`, `pubts`, `ytenant_id`, `micro_service_code`) 
-VALUES (2391639104067469319,'payfile_prepare_data_card',
-'${c-hr-gd-cnpcgas}/javascripts/HRXZHS_MDD_payfile_prepare_data_VM.Extend.min.js',
-'rolg7y2n','2025-12-10 15:47:27','rolg7y2n','c-hr-gd-cnpcgas');
+          (`id`, `cbillno`, `extscripturl`, `tenant_id`, `pubts`, `ytenant_id`, `micro_service_code`) 
+          VALUES (2391639104067469319,'payfile_prepare_data_card',
+          '${c-hr-gd-cnpcgas}/javascripts/HRXZHS_MDD_payfile_prepare_data_VM.Extend.min.js',
+          'rolg7y2n','2025-12-10 15:47:27','rolg7y2n','c-hr-gd-cnpcgas');
