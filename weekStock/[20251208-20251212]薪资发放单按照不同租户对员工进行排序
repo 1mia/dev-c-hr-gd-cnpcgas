@@ -1,0 +1,26 @@
+一：完成了薪资发放单按照组织排序、组织排序相同时按照部门排序
+  2.1 亮点
+    （1）调用了标品接口
+          通过写个前端拓展进入界面的时候就触发一下。添加页面初始化事件时调用接口、调用接口时用异步
+    （2）开发指南-新功能开发-前端开发MDF
+   
+
+  2.2 难点
+    （1）排序值确定
+         查看原表数据，看是否有排序值。不管排序值是否连续、只需要实现排序效果。
+    （2）数据来源表确定
+           一个功能单据涉及的实体有多个时看哪个包含自己需要的数据。研究不同表之间的数据，看数据关系。
+    （3）调用标品接口时不通
+      
+  3.3 深度剖析
+     如果重做这个任务，哪些部分可以做得更好
+    （1）前端拓展  
+            提交脚本检查是否有执行：SELECT *FROM diwork wa mdd.bill customerdef
+            脚本插入注意事项：
+                create 必须加 IF NOT EXISTS
+                insert   改为REPLACE INTO 
+                update 的where 条件必须加上set的key
+    （2） (`id`, `cbillno`, `extscripturl`, `tenant_id`, `pubts`, `ytenant_id`, `micro_service_code`) 
+VALUES (2391639104067469319,'payfile_prepare_data_card',
+'${c-hr-gd-cnpcgas}/javascripts/HRXZHS_MDD_payfile_prepare_data_VM.Extend.min.js',
+'rolg7y2n','2025-12-10 15:47:27','rolg7y2n','c-hr-gd-cnpcgas');
