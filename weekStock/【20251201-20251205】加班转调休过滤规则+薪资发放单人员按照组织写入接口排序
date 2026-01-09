@@ -1,0 +1,33 @@
+一：完成了加班转调休过滤规则开发
+  2.1 亮点
+    （1）触发方式：由发薪人员界面取消转调休后在日报对应人员点击生成
+    （2）规则
+
+  2.2 难点
+    （1）页面数据确定
+          判断自己和成老师的数据查询条件是否一致
+  3.3 深度剖析
+     如果重做这个任务，哪些部分可以做得更好
+    （1）规则开发：
+          命名+提交脚本
+
+二：完成了发薪审批人员按照组织排序后写入接口
+  2.1 亮点
+    （1）使用规则开发
+     （2）对规则参数获取jsonobject后转换为字符串查看VO字段
+  2.2 难点
+        （1）找不到新增接口，无法验证是使用规则开发还是插件开发
+ 3.3 深度剖析
+     如果重做这个任务，哪些部分可以做得更好
+    （1）调试
+          获取规则参数后使用JsonObject.toString然后去在线转换网站转换
+    （2）数据不对及时和成老师说然后实施迁移
+    （3）规则开发
+            在yonbip_hr_tm.billruleregister 写入插入sql：billnum 为 hrtm_overtime_statistics_list，action : transferRestExt,id为cnpcgasOvertimeTransferBeforeRule
+            插入语句：INSERT INTO `yonbip_hr_tm`.`billruleregister` (`id`, `billnum`, `action`, `ruleId`, `iorder`, `overrule`, `tenant_id`, `key`, `isSystem`, `url`, `isSync`, `isAsyn`, `config`, `domain`, `dataRule`, `mock`, `ytenant_id`, `micro_service_code`, `pubts`) VALUES ('2412717927436124177', 'hrtm_overtime_statistics_list', 'transferRestExt', 'cnpcgasOvertimeTransferBeforeRule', '19.00', NULL, 'rolg7y2n', NULL, '\0', NULL, '0', '0', NULL, 'c-hr-gd-cnpcgas', NULL, NULL, 'rolg7y2n', 'c-hr-gd-cnpcgas', '2025-11-28 17:27:31');
+            不用登记直接提交
+            规则触发生效：录制bpr查看是否是否有规则名或动作名
+            确定返回结果，是否需要给属性赋值
+            
+            
+      
