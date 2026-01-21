@@ -1,0 +1,5 @@
+一：完成了单据开发
+  （1）样式
+        表头合并
+          {"path":"年度绩效奖金 ","cFieldName":"年度绩效奖金 ","cCaption":"年度绩效奖金 ","cShowCaption":"年度绩效奖金 "}
+          {"path":"效益指标系数|净利润","cFieldName":"净利润","cCaption":"净利润","cShowCaption":"净利润","parent":{"path":"效益指标系数","cFieldName":"效益指标系数","cCaption":"效益指标系数","cShowCaption":"效益指标系数"}}
